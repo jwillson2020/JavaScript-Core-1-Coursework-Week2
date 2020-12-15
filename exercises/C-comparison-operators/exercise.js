@@ -7,14 +7,14 @@
 
 var studentCount = 16;
 var mentorCount = 9;
-var moreStudentsThanMentors; // finish this statement
-
+var moreStudentsThanMentors = studentCount > mentorCount; // used greater than
+var studMentorCount = studentCount + mentorCount; // added val of student & mentors
 var roomMaxCapacity = 25;
-var enoughSpaceInRoom; // finish this statement
+var enoughSpaceInRoom = studMentorCount <= roomMaxCapacity; // used less than qual to
 
 var personA = "Daniel";
 var personB = "Irina";
-var sameName; // finish this statement
+var sameName = personA === personB; // used equals x3
 
 /* 
   DO NOT EDIT BELOW THIS LINE
