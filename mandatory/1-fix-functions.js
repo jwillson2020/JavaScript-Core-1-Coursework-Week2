@@ -10,28 +10,43 @@
 
 */
 
-function mood() {
-  let isHappy = true;
+function mood(moodType) {
+  let isHappy = (moodType ===true); // lots of playing around
+ 
 
   if (isHappy) {
     return "I am happy";
-  } else {
+  }
+  else  {
     return "I am not happy";
   }
 }
 
 function greaterThan10(num) {
-  let isBigEnough;
+  let isBigEnough = num > 10;
 
   if (isBigEnough) {
     return "num is greater than 10";
-  } else {
+  } 
+  
+  else {
     return "num is not big enough";
   }
 }
-
+//test("sortArray function works", sortArray(["a", "n", "c", "e", "z", "f"]), [
+  //"a",
+ // "c",
+ // "e",
+ // "f",
+  //"n",
+  //"z", ]);
+ // function sortString(str){
+    //var arr = str.split('');
+    //var sorted = arr.sort();
+    //return sorted.join('');
+  
 function sortArray(letters) {
-  let sortedLetters = letters;
+  let sortedLetters = letters.sort();
 
   return sortedLetters;
 }
