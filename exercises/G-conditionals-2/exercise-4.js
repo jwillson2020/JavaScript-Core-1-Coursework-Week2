@@ -8,7 +8,15 @@
   Hint: Google how to check if a string contains a word
 */
 
-function containsCode(sentence) {}
+function containsCode(sentence) {
+  if (sentence.includes("Code") || sentence.includes("code")){ // use .includes not tried indexOf 
+   return true;
+  }
+  else {
+    return false;
+  }
+}
+  
 
 /* 
 DO NOT EDIT BELOW THIS LINE
