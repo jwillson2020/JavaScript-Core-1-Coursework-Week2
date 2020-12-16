@@ -5,13 +5,18 @@
 */
 
 function first(arr) {
-  return; // complete this statement
+return (arr[0]); // complete this statement
 }
 
 function last(arr) {
-  return; // complete this statement
+  
+  //return (arr.length -1); // not right
+  return (arr.slice(-1));  // works but with brackets [] ????
+  // tried index0f -1, 
 }
 
+
+// tried index0f -1,  
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */

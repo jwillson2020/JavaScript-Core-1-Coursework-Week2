@@ -8,7 +8,7 @@
 function isEmpty(arr) {
 
 if (arr.length === 0 ){
-  return "is Empty: " + true;
+  return "is Empty: " + true; // NOTHING IN ARRAY
 }
 //if (arr = names) {
   //return "is Empty: " + false;    //   does not return if array has content
