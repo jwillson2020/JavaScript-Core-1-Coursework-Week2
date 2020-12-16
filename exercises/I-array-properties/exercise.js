@@ -6,7 +6,18 @@
 */
 
 function isEmpty(arr) {
-  return; // complete this statement
+
+if (arr.length === 0 ){
+  return "is Empty: " + true;
+}
+//if (arr = names) {
+  //return "is Empty: " + false;    //   does not return if array has content
+//}
+
+else {
+  return "is Empty: " + false;
+}
+  // complete this statement
 }
 
 /* 
