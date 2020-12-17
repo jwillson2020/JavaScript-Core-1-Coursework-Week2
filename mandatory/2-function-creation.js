@@ -5,7 +5,23 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
+
+//tidyUpString(["/Daniel ", "irina ", " Gordon", "ashleigh "]),
+  //["daniel", "irina", "gordon", "ashleigh"]
+//);
+function tidyUpString(strArr) { }
+//let lowerCased = strArr.toLowerCase;
+//let noSpace =  strArr.split(" ").join("");
+//let replace = strArr.replace(/\s/g,  "");
+//let lowerCase = strArr.toLowerCase();
+//return strArr.toLowerCase(),strArr.replace(/\s/g,  " ");
+//test.toLowerCase().replace(/ /g, '-');
+//let removed = strArr.toLowerCase() strArr.replace(/\s/g,  "");
+
+
+//let removed = strArr.toLowerCase().replace(/ /g, '-');
+//return removed;
+//}
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -15,8 +31,19 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
+function validate(num) {
+if (isNaN(num)){  // Nan = none a number
+  // if (value%2 == 0)
+  return false;
+}
 
+if (num%2 ==0 && num <= 100) {
+  return true;
+}
+else {
+  return false;
+}
+}
 /* 
 Write a function that returns a copy of the given array arr, but with the element at the given index, index removed.
 The function must NOT change the original array, arr.

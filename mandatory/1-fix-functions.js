@@ -52,14 +52,16 @@ function sortArray(letters) {
 }
 
 function first5(numbers) {
-  let sliced;
+  let sliced = numbers.slice(0,5); // returns [1,2,3,4,5]
 
   return sliced;
 }
-
+//"get3rdIndex function works - case 1",
+  //get3rdIndex(["fruit", "banana", "apple", "strawberry", "raspberry"]),
+  //"strawberry"
 function get3rdIndex(arr) {
-  let index = 3;
-  let element;
+  let index = arr.slice(3,4);  // ["strawberry"]  not right
+  let element = index[index.length -1]; // works ???
 
   return element;
 }
