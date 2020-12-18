@@ -14,11 +14,13 @@ Write a function that:
 function tidyUpString(strArr) { 
 
 for (let i =0; i < strArr.length ; i++ ){   // looping through array
-const element = strArr[i];
-element = element.trim().replace("/", "").toLowerCase();//.toLowerCase;  // trims remove whitespace 
-return element; //works yes! 
+//const element = strArr[i];
+//const output = element.trim().replace("/", "").toLowerCase();//.toLowerCase; 
+ // trims remove whitespace 
+ strArr[i] = strArr[i].trim().replace("/", "").toLowerCase();
+//return strArr; //works yes! 
 }
-
+return strArr; 
 //return strArr.map(strArr.trim(),strArr.replace("/\s/g" , ""));
 }
 
@@ -70,15 +72,18 @@ function formatPercentage(arr) {
 
 //let twoPlaces = Math.round(arr* (10 ^ 2)); // (x * 100) / 100)
 for(let h = 0 ; h < arr.length ; h++ ){
-let round = Math.round(arr[h]);
-let twoPlaces = (round* 100) /100 ;
-let util = twoPlaces + "%"; // .toString()
-//const map = util.map;
-//let fixed = arr[h].toFixed(2);
-//return arr.map.Math.round(arr.length);
-return (util);
-}
+ if (arr[h] < 100){
+arr[h] = Math.round(arr[h]* 100) /100 + "%";
+ }
+ 
+ else if (arr[h] > 100) {
+ arr[h] = "100%" ; // no need to use replace
+  
+ }
 
+ 
+}
+return arr;
 
 }
 
