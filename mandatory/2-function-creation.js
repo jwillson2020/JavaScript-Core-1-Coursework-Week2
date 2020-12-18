@@ -6,16 +6,19 @@ Write a function that:
 - makes the string all lowercase
 */
 
+//const { NOTINITIALIZED } = require("dns");
+
 //tidyUpString(["/Daniel ", "irina ", " Gordon", "ashleigh "]),
   //["daniel", "irina", "gordon", "ashleigh"]
 //);
 function tidyUpString(strArr) { 
 
-for(let i =0; i < strArr.length ; i++ ){   // looping through array
+for (let i =0; i < strArr.length ; i++ ){   // looping through array
 const element = strArr[i];
-strArr[i] =element.trim().replace("/", "").toLowerCase;  // trims remove whitespace 
-return strArr[i];  //works yes! 
+element = element.trim().replace("/", "").toLowerCase();//.toLowerCase;  // trims remove whitespace 
+return element; //works yes! 
 }
+
 //return strArr.map(strArr.trim(),strArr.replace("/\s/g" , ""));
 }
 
@@ -47,11 +50,12 @@ else {
 Write a function that returns a copy of the given array arr, but with the element at the given index, index removed.
 The function must NOT change the original array, arr.
 */
+//remove([10, 293, 292, 176, 29], 3)
 
 function remove(arr, index) {
-let a = arr.slice(0,index);
-let b = arr.slice(index+1);
-return a.concat(b);   // complete this statement
+let a = arr.slice(0,index);  // 10, 293, 292  index = 3rd along
+let b = arr.slice(index+1);  // index = 3rd +1 4th
+return a.concat(b);   //   joins //  [10, 293, 292,] join [, 29]
 }
 
 /*
@@ -62,7 +66,21 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-function formatPercentage(arr) {}
+function formatPercentage(arr) {
+
+//let twoPlaces = Math.round(arr* (10 ^ 2)); // (x * 100) / 100)
+for(let h = 0 ; h < arr.length ; h++ ){
+let round = Math.round(arr[h]);
+let twoPlaces = (round* 100) /100 ;
+let util = twoPlaces + "%"; // .toString()
+//const map = util.map;
+//let fixed = arr[h].toFixed(2);
+//return arr.map.Math.round(arr.length);
+return (util);
+}
+
+
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

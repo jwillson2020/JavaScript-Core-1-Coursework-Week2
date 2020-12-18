@@ -1,17 +1,19 @@
 
 
-function remove(arr, index) {
-  let a = arr.slice(0,index);
-  let b = arr.slice(index+1);
+function formatPercentage(arr) {
 
-  return a.concat(b);   // complete this statement
+  //let twoPlaces = Math.round(arr* (10 ^ 2)); // (x * 100) / 100)
+  for(let h = 0 ; h < arr.length ; h++ ){
+  let round = Math.round(arr[h]);
+  let twoPlaces = (round * 100) /100 ;
+  let util = twoPlaces + "%"; // .toString()
+  //const map = util.map;
+  //let fixed = arr[h].toFixed(2);
+  //return arr.map.Math.round(arr.length);
+  return (util);
+
+}
+ 
   }
-
-
-  remove([10, 293, 292, 176, 29], 3), 
-  
-  //[10,293,292,29,];
-
-  //console.log(a);
-  //console.log(b);
-  console.log(remove());
+ 
+  formatPercentage([23, 18.103, 187.2, 0.372]);
