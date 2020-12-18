@@ -9,19 +9,18 @@ Write a function that:
 //tidyUpString(["/Daniel ", "irina ", " Gordon", "ashleigh "]),
   //["daniel", "irina", "gordon", "ashleigh"]
 //);
-function tidyUpString(strArr) { }
-//let lowerCased = strArr.toLowerCase;
-//let noSpace =  strArr.split(" ").join("");
-//let replace = strArr.replace(/\s/g,  "");
-//let lowerCase = strArr.toLowerCase();
-//return strArr.toLowerCase(),strArr.replace(/\s/g,  " ");
-//test.toLowerCase().replace(/ /g, '-');
+function tidyUpString(strArr) { 
+
+for(let i =0; i < strArr.length ; i++ ){   // looping through array
+const element = strArr[i];
+strArr[i] =element.trim().replace("/", "").toLowerCase;  // trims remove whitespace 
+return strArr[i];  //works yes! 
+}
+//return strArr.map(strArr.trim(),strArr.replace("/\s/g" , ""));
+}
+
 //let removed = strArr.toLowerCase() strArr.replace(/\s/g,  "");
 
-
-//let removed = strArr.toLowerCase().replace(/ /g, '-');
-//return removed;
-//}
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -50,7 +49,9 @@ The function must NOT change the original array, arr.
 */
 
 function remove(arr, index) {
-  return; // complete this statement
+let a = arr.slice(0,index);
+let b = arr.slice(index+1);
+return a.concat(b);   // complete this statement
 }
 
 /*
